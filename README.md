@@ -19,7 +19,7 @@
 * auto-scrolling
 * marking logs
 * number of unread logs in favicon
-* themes (default, dark)
+* themes (default, dark or custom)
 * [highlighting](#highlighting)
 * search (`Tab` to focus, `Esc` to clear)
 * set filter from url parameter `filter`
@@ -122,6 +122,14 @@ http {
     }
 }
 ```
+### Custom Theme
+.css files used by `frontail` are located at `/usr/lib/node_modules/frontail/web/assets/styles`.
+
+You can edit the `default.css` or `dark.css`, but it is recommended to create your own css file, i.e. `custom.css` and use `@import 'default.css';` or `@import 'dark.css';` at the top of the file.
+This way you only need to override the styles you want to change.
+
+To use your custom theme, start frontail with the `-t` option and your css file name (without .css): 
+`frontail -t custom`
 
 ### Usage statistics
 
